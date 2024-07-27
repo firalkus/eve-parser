@@ -1,0 +1,19 @@
+{
+    "name": "desoto/eve-parser",
+    "description": "Parse various EVE text blocks using PHP",
+    "type": "library",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "Desoto\\EveParser\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "illuminate/collections": "^11.18"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11",
+        "symfony/var-dumper": "^7.1"
+    }
+}
