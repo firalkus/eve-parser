@@ -6,26 +6,21 @@ use Desoto\EveParser\Formatter;
 
 final class Currency extends Formatter
 {
-    public function format(): string
+    public function format(): float
     {
         if (empty($this->getOriginal())) {
-            return $this->formatResult($this->getOriginal());
+            return $this->formatResult();
         }
 
         if (is_string($this->getOriginal())) {
-            return $this->formatResult(
-                round((float)str_replace(',', '', $this->getOriginal()),2)
-            );
+            return $this->formatResult();
         }
 
-        return $this->formatResult($this->getOriginal());
+        return $this->formatResult();
     }
 
-    private function formatResult(float $value): string
+    private function formatResult(): float
     {
-        return sprintf(
-            "%s ISK",
-            $value
-        );
+        return round((float)str_replace(',', '', $this->getOriginal()), 2);
     }
 }

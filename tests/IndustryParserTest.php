@@ -16,7 +16,7 @@ Fusion Thruster	721	728	41679.16	11532";
         $this->assertEquals('Fusion Thruster', $results[0]['item']);
         $this->assertEquals(721, $results[0]['required']);
         $this->assertEquals(728, $results[0]['available']);
-        $this->assertEquals('41679.16 ISK', $results[0]['estimated_unit_price']);
+        $this->assertEquals(41679.16, $results[0]['estimated_unit_price']);
         $this->assertEquals(11532, $results[0]['type_id']);
     }
 }
